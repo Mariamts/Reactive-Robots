@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import roboReducer from './robo-reducers';
+import { roboReducer } from './robo-reducers';
 
 import { userReducer } from './userReducer';
 

@@ -8,7 +8,6 @@ function FakerRobots() {
   const dispatch = useDispatch();
   const { data: roboList = [] } = useSelector(roboSelector);
 
-  console.log(roboList);
   useEffect(() => {
     dispatch(getRoboActionAsync(20));
   }, [dispatch]);
