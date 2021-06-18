@@ -22,6 +22,16 @@ function Navigation() {
           </NavLink>
         </li>
 
+        <li className="nav-item">
+          <NavLink
+            className="nav-link"
+            to={routes.FAKER_ROBOTS}
+            exact
+            activeClassName={css['active-class']}>
+            Faker Robots
+          </NavLink>
+        </li>
+
         {authorized && (
           <li className="nav-item">
             <NavLink

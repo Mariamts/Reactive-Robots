@@ -1,6 +1,6 @@
 export const PROFILE_PATH = '/profile';
 export const HOME_PATH = '/';
-
+export const FAKER_ROBOTS = '/faker-robots';
 // auth
 export const AUTH_PATH = '/auth';
 export const SIGN_IN_PATH = '/auth/sign-in';
