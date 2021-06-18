@@ -1,1 +1,1 @@
-export { default } from './FakerRobots';
+export { default } from './faker-robots';

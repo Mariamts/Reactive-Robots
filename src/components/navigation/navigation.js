@@ -32,6 +32,16 @@ function Navigation() {
           </NavLink>
         </li>
 
+        <li className="nav-item">
+          <NavLink
+            className="nav-link"
+            to={routes.CUSTOM_ROBOTS}
+            exact
+            activeClassName={css['active-class']}>
+            Custom Robots
+          </NavLink>
+        </li>
+
         {authorized && (
           <li className="nav-item">
             <NavLink
