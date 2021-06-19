@@ -19,8 +19,8 @@ function FakerRobots() {
       {roboList.map((item, index) => {
         return (
           <div className="card" key={index}>
-            <h2>{item.title}</h2>
-            <img src={ROBO_URL + item.title} width="100" />
+            <h2>{item.username}</h2>
+            <img src={ROBO_URL + item.username} width="100" />
           </div>
         );
       })}
