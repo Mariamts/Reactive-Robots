@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import { useLocalStorage } from '../../../hooks/useLocalStorage';
 import { setAuthUserAction } from '../../../redux/actions';
 import { login } from '../../../services';
 import { AUTH_TOKEN } from '../../../utils/constants';
@@ -14,10 +15,12 @@ function SignInForm() {
   } = useForm();
   const history = useHistory();
   const dispatch = useDispatch();
+  const [storage, setStorage] = useLocalStorage(AUTH_TOKEN);
 
   const onSubmit = async (formData) => {
     const loggedIn = await login(formData);
-    localStorage.setItem(AUTH_TOKEN, JSON.stringify(loggedIn.token));
+    console.log(storage);
+    setStorage(() => JSON.stringify(loggedIn.token));
     dispatch(setAuthUserAction(loggedIn.token));
     history.replace(PROFILE_PATH);
   };
