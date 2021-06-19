@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import PropTypes from 'prop-types';
 import { withAuthProtected } from '../../hoc';
 import { setAuthGuestAction } from '../../redux/actions';
 import { logOut } from '../../services';
@@ -28,5 +29,9 @@ function Profile({ title = '' }) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default withAuthProtected(Profile);

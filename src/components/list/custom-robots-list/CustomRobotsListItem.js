@@ -10,14 +10,12 @@ function CustomRobotsListItem({ item }) {
   };
 
   return (
-    <div className="card custom-robots-list-item text-white bg-primary">
+    <div
+      className={`card m-3 bg-info ${item.done ? 'bg-danger' : 'bg-primary'}`}
+      style={{ width: '18rem' }}>
+      <img src={ROBO_URL + item.title} className="card-img-top" alt={item.title} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
-        <img src={ROBO_URL + item.title} width="100" />
-
-        <button className="btn btn-danger" onClick={onClick}>
-          Remove
-        </button>
       </div>
     </div>
   );

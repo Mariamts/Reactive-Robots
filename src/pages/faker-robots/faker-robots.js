@@ -14,16 +14,24 @@ function FakerRobots() {
 
   return (
     <div>
-      <h1>Robo list length {roboList.length}</h1>
-
-      {roboList.map((item, index) => {
-        return (
-          <div className="card" key={index}>
-            <h2>{item.username}</h2>
-            <img src={ROBO_URL + item.username} width="100" />
-          </div>
-        );
-      })}
+      <h1 className="mb-3">Robo Users</h1>
+      <div className="row row-cols-1 row-cols-md-2 g-4">
+        {roboList.map((item, index) => {
+          return (
+            <div className="card m-3 bg-info" style={{ width: '18rem' }} key={index}>
+              <img
+                src={ROBO_URL + item.username}
+                className="card-img-top"
+                alt={item.username}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{item.username}</h5>
+                <p className="card-text">{item.name}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
