@@ -18,7 +18,7 @@ function SignUpForm() {
         <input type="password" className="form-control" id="password" />
       </div>
       <button className="btn btn-primary" type="submit">
-        Sign In
+        Sign Up
       </button>
     </form>
   );

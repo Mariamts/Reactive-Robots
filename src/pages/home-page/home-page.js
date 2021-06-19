@@ -13,6 +13,7 @@ function HomePage() {
           rel="noreferrer">
           Mariam Tsotsolashvili
         </a>
+        and&nbsp;&nbsp;
         <a
           href="https://www.linkedin.com/in/mushni-chankseliani-031820192/"
           className="text-decoration-none text-info"

@@ -12,10 +12,12 @@ function App() {
     dispatch(autoLoginAction());
   }, []);
   return (
-    <div className="container">
+    <>
       <Navigation />
-      <Routes />
-    </div>
+      <div className="container">
+        <Routes />
+      </div>
+    </>
   );
 }
 
