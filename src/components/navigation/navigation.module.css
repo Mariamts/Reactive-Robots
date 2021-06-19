@@ -1,9 +1,9 @@
 .active-class {
-  background-color: lightblue !important;
-  color: #fff !important;
+  border-bottom: 2px solid lightblue !important;
+  font-weight: 500;
 }
+
 
 .active-class:hover {
   color: black;
-  text-decoration: underline;
 }
