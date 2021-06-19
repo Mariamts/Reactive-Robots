@@ -16,6 +16,9 @@ function CustomRobotsListItem({ item }) {
       <img src={ROBO_URL + item.title} className="card-img-top" alt={item.title} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
+        <button className="btn btn-primary" onClick={onClick}>
+          Remove
+        </button>
       </div>
     </div>
   );
