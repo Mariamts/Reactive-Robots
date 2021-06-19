@@ -19,13 +19,13 @@ function AddCustomRobotForm() {
     <form className="row g-1" onSubmit={onSubmit}>
       <div className="mb-3">
         <label htmlFor="title" className="form-label">
-          title Will Be - {title}
+          Robo Title Will Be - {title}
         </label>
         <input
           type="text"
           className="form-control"
           id="title"
-          placeholder=""
+          placeholder="User name"
           value={title}
           onChange={({ target }) => {
             setTitle(target.value);

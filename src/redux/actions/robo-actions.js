@@ -1,4 +1,5 @@
-import { getFakerRobots } from '../../services/faker';
+import { API_SERVICE } from '../../services/api';
+// import { getFakerRobots } from '../../services/faker';
 import {
   GET_ROBO_ATTEMPT,
   GET_ROBO_FAILURE,
@@ -23,7 +24,9 @@ export const getRoboActionAsync = (amount = 10) => {
   return async (dispatch) => {
     try {
       dispatch(getRoboRequestAction());
-      const data = await getFakerRobots(amount);
+      const data = await API_SERVICE.getRoboUsersAsync();
+      console.log('data', data);
+      // const data = await getFakerRobots(amount);
       dispatch(getRoboSuccessAction(data));
     } catch (error) {
       dispatch(getRoboFailureAction(error));
