@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRoboActionAsync } from '../../redux/actions/robo-actions';
 import { roboSelector } from '../../redux/selectors';
 import { ROBO_URL } from '../../utils/constants';
+import { TEST_IDS } from '../../utils/testIds';
 
-function FakerRobots() {
+function FakerRobots({ title = 'Robo Users' }) {
   const dispatch = useDispatch();
   const { data: roboList = [] } = useSelector(roboSelector);
 
@@ -14,7 +15,9 @@ function FakerRobots() {
 
   return (
     <div>
-      <h1 className="mb-3">Robo Users</h1>
+      <h1 className="mb-3" data-testid={TEST_IDS.fakerRobots.title}>
+        {title}
+      </h1>
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {roboList.map((item, index) => {
           return (

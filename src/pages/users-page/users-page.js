@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsersActionAsync } from '../../redux/actions/users-actions';
 import { usersSelector } from '../../redux/selectors';
+import { TEST_IDS } from '../../utils/testIds';
 
 function Users() {
   const dispatch = useDispatch();
@@ -13,7 +14,9 @@ function Users() {
 
   return (
     <div>
-      <h1 className="mb-3">Users</h1>
+      <h1 className="mb-3" data-testid={TEST_IDS.users.title}>
+        Users
+      </h1>
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {usersList.map((item, index) => {
           return (

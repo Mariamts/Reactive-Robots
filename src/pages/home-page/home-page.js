@@ -1,3 +1,5 @@
+import { TEST_IDS } from '../../utils/testIds';
+
 function HomePage() {
   return (
     <div className="row">
@@ -7,6 +9,7 @@ function HomePage() {
       <h3>
         Creators:
         <a
+          data-testid={TEST_IDS.home.href}
           href="https://www.linkedin.com/in/mariam-tsotsolashvili-09b5221a0/"
           className="mx-3 text-decoration-none text-info"
           target="_blank"
