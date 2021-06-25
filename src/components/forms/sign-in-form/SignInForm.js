@@ -17,9 +17,11 @@ function SignInForm() {
 
   const onSubmit = async (formData) => {
     const loggedIn = await login(formData);
-    localStorage.setItem(AUTH_TOKEN, JSON.stringify(loggedIn.token));
-    dispatch(setAuthUserAction(loggedIn.token));
-    history.replace(PROFILE_PATH);
+    if (loggedIn.token) {
+      localStorage.setItem(AUTH_TOKEN, JSON.stringify(loggedIn.token));
+      dispatch(setAuthUserAction(loggedIn.token));
+      history.replace(PROFILE_PATH);
+    }
   };
 
   return (
