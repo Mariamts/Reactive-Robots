@@ -19,7 +19,7 @@ export const getUsersFailureAction = (payload) => ({
   payload,
 });
 
-export const getUsersActionAsync = (amount = 10) => {
+export const getUsersActionAsync = () => {
   return async (dispatch) => {
     try {
       dispatch(getUsersRequestAction());

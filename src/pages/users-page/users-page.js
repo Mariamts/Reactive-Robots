@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsersActionAsync } from '../../redux/actions/users-actions';
-import { usersSelector } from '../../redux/selectors/users-selector';
+import { usersSelector } from '../../redux/selectors';
 
 function Users() {
   const dispatch = useDispatch();

@@ -11,6 +11,7 @@ const AuthPage = React.lazy(() => import('./pages/auth'));
 const CustomRobots = React.lazy(() => import('./pages/custom-robots-page'));
 const FakerRobots = React.lazy(() => import('./pages/faker-robots'));
 const Users = React.lazy(() => import('./pages/users-page'));
+const Resources = React.lazy(() => import('./pages/resources-page'));
 
 function Routes() {
   return (
@@ -30,6 +31,9 @@ function Routes() {
         </Route>
         <Route path={routes.USERS_PATH}>
           <Users />
+        </Route>
+        <Route path={routes.RESOURCES_PATH}>
+          <Resources />
         </Route>
         <Route path={routes.HOME_PATH}>
           <HomePage />

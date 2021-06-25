@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { resourcesReducer } from './resources-reducer';
 import { roboReducer } from './robo-reducers';
 
 import { userReducer } from './userReducer';
@@ -9,6 +10,7 @@ const rootReducer = combineReducers({
   robots: roboReducer,
   // users list
   users: usersReducer,
+  resources: resourcesReducer,
 });
 
 export default rootReducer;
